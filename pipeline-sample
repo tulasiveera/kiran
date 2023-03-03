@@ -1,0 +1,26 @@
+pipeline 
+    agent any  
+    statges {
+        stage ('git') {
+        steps {
+            echo 'git'
+        }
+        }
+        stage ('maven') {
+        steps {
+            echo 'maven'
+            
+        }
+        }
+        stage ('docker') {
+        steps {
+            echo 'docker'
+            
+        }
+        }
+        
+        
+
+    }
+    
+}
