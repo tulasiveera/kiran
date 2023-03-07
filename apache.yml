@@ -4,16 +4,16 @@
   tasks:
   - name: installing pkg
     apt:
-      name : "httpd"
-      state : "present"
-  - name : start apache server
+      name: "httpd"
+      state: "present"
+  - name: start apache server
     services:
       name: httpd
       state: started
-      enabled : true
-  - name : deploy static website
-    copy :
-      src : index.html
-      dest : /var/www/html/
+      enabled: true
+  - name: deploy static website
+    copy:
+      src: index.html
+      dest: /var/www/html/
  ...
  
