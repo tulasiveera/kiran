@@ -3,7 +3,7 @@
   become: true
   tasks:
   - name: installing pkg
-     apt: name=apache2 state=lates
+     apt: name=apache2 
   - name: start apache server
     services:
       name: apache2
