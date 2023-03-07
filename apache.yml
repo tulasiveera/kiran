@@ -2,12 +2,10 @@
 - hosts: webservers
   become: true
   tasks:
-   - name: Update apt cache
-      apt:
-        update_cache: yes
   - name: installing pkg
     apt: 
       name: "httpd"
+      update_cache: yes
       state: "present"
   - name: start apache server
     service:
