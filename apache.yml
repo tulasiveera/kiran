@@ -4,8 +4,8 @@
   tasks:
   - name: Creating a new directory
     file:
-      path: "/tul"
-      state: directory
+      path: "/tul"   
+     state: directory
   - name: installing pkg
     apt:
       name : "apache2"
