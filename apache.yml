@@ -2,14 +2,14 @@
 - hosts: webservers
   become: true
   tasks:
-  - name: Creating a new directory
-    file:
-      path: "/tul"   
-     state: directory
   - name: installing pkg
     apt:
-      name : "apache2"
+      name : "httpd"
       state : "present"
+  - name : start apache server
+    services:
+      name: httpd
+      state: started
       enabled : true
   - name : deploy static website
     copy :
