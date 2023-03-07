@@ -1,0 +1,19 @@
+---
+- hosts: yas
+  become: true
+  tasks:
+  - name: Creating a new directory
+    file:
+      path: "/tul"
+      state: directory
+  - name: installing pkg
+    apt:
+      name : "apache2"
+      state : "present"
+      enabled : true
+  - name : deploy static website
+    copy :
+      src : index.html
+      dest : /var/www/html/
+ ...
+ 
