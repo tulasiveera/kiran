@@ -3,10 +3,12 @@
   become: true
   tasks:
   - name: installing pkg
-     apt: name=apache2 
+    apt: 
+      name: "httpd"
+      state: "present"
   - name: start apache server
     services:
-      name: apache2
+      name: httpd
       state: started
       enabled: true
   - name: deploy static website
